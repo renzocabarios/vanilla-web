@@ -16,13 +16,35 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      @import url("https://fonts.google.com/specimen/Montserrat");
+      @import url("https://fonts.google.com/specimen/Fraunces");
+
       :root {
         font-size: 9px;
+        --dark-gray-blue: hsl(228, 12%, 48%);
+        --dark-blue: hsl(212, 21%, 14%);
       }
+
+      .p-color {
+        color: var(--dark-blue);
+      }
+
+      .s-color {
+        color: var(--dark-gray-blue);
+      }
+
       * {
         margin: 0;
         box-sizing: border-box;
         padding: 0;
+      }
+
+      .montserat {
+        font-family: "Montserrat", Arial;
+      }
+
+      .fraunces {
+        font-family: "Fraunces", Arial;
       }
 
       body {
@@ -58,8 +80,12 @@
         border-radius: 0.5rem;
       }
 
+      .ls-lg {
+        letter-spacing: 0.5rem;
+      }
+
       .content {
-        padding: 4rem;
+        padding: 2.5rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -75,6 +101,10 @@
 
       .fs-lg {
         font-size: 4rem;
+      }
+
+      .fs-sm {
+        font-size: 1.7rem;
       }
 
       button {
@@ -132,6 +162,10 @@
           background-image: url("./images/image-product-desktop.jpg");
           border-radius: 0.5rem 0 0 0.5rem;
         }
+
+        .content {
+          padding: 4.5rem;
+        }
       }
     </style>
   </head>
@@ -140,11 +174,11 @@
       <div class="card br">
         <div class="card-image"></div>
         <div class="content">
-          <h1 class="fw-light">Perfume</h1>
+          <h1 class="fw-light montserat fs-sm ls-lg p-color">Perfume</h1>
 
-          <h1 class="fw-bold fs-lg">Gabrielle Essence Eau De Parfum</h1>
+          <h1 class="fw-bold fs-lg p-color">Gabrielle Essence Eau De Parfum</h1>
 
-          <h1 class="fw-light">
+          <h1 class="fw-light montserat fs-sm p-color">
             A floral, solar and voluptuous interpretation composed by Olivier
             Polge, Perfumer-Creator for the House of CHANEL.
           </h1>
