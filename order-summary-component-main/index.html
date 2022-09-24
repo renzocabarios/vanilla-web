@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Order summary card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.google.com/specimen/Red+Hat+Display");
+      :root {
+        font-size: 16px;
+        font-family: "Red Hat Display", sans-serif;
+        --pale-blue: hsl(225, 100%, 94%);
+        --bright-blue: hsl(245, 75%, 52%);
+        --very-pale-blue: hsl(225, 100%, 98%);
+        --desaturated-blue: hsl(224, 23%, 55%);
+        --dark-blue: hsl(223, 47%, 23%);
+        --radius: 1rem;
+      }
+
+      .s-color {
+        color: var(--desaturated-blue);
+      }
+
+      .highlight-color {
+        color: var(--bright-blue);
+      }
+
+      .underline {
+        text-decoration: underline;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .fs-lg {
+        font-size: 1.5rem;
+      }
+
+      .fs-md {
+        font-size: 1.2rem;
+      }
+
+      .p-color {
+        color: var(--dark-blue);
+      }
+
+      .fw-s {
+        font-weight: 500;
+      }
+
+      .fw-m {
+        font-weight: 700;
+      }
+
+      .fw-l {
+        font-weight: 900;
+      }
+
+      body {
+        height: 100vh;
+        min-height: 100vh;
+      }
+
+      .container {
+        height: 100%;
+        background-image: url("./images/pattern-background-mobile.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card {
+        height: 90%;
+        width: 90%;
+        max-width: 25rem;
+        max-height: 50rem;
+        background: white;
+        border-radius: var(--radius);
+        display: grid;
+        grid-template-rows: 1fr 2.5fr;
+        box-shadow: 0.1rem 0.1rem 1rem #cccccc;
+      }
+
+      .card-image {
+        background-image: url("./images/illustration-hero.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: var(--radius) var(--radius) 0 0;
+      }
+
+      .content {
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 1.5rem;
+        text-align: center;
+      }
+
+      button {
+        padding: 1.5rem;
+        background-color: var(--bright-blue);
+        color: white;
+        border: none;
+        border-radius: var(--radius);
+        box-shadow: 0.1rem 0.1rem 10rem #cccccc;
+      }
+
+      .detail {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0.5rem;
+        border-radius: var(--radius);
+        background-color: var(--very-pale-blue);
+      }
+
+      .detail:nth-last-child() {
+        margin-right: auto;
+      }
+
+      .plan {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 0.4rem;
+      }
+
+      @media only screen and (min-width: 462px) {
+        .container {
+          background-image: url("./images/pattern-background-desktop.svg");
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-image"></div>
+        <div class="content">
+          <p class="p-color fs-lg fw-l">Order Summary</p>
+          <p class="fw-s fs-md s-color">
+            You can now listen to millions of songs, audiobooks, and podcasts on
+            any device anywhere you like!
+          </p>
+
+          <div class="detail">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+              <g fill="none" fill-rule="evenodd">
+                <circle cx="24" cy="24" r="24" fill="#DFE6FB" />
+                <path
+                  fill="#717FA6"
+                  fill-rule="nonzero"
+                  d="M32.574 15.198a.81.81 0 00-.646-.19L20.581 16.63a.81.81 0 00-.696.803V26.934a3.232 3.232 0 00-1.632-.44A3.257 3.257 0 0015 29.747 3.257 3.257 0 0018.253 33a3.257 3.257 0 003.253-3.253v-8.37l9.726-1.39v5.327a3.232 3.232 0 00-1.631-.441 3.257 3.257 0 00-3.254 3.253 3.257 3.257 0 003.254 3.253 3.257 3.257 0 003.253-3.253V15.81a.81.81 0 00-.28-.613z"
+                />
+              </g>
+            </svg>
+            <div class="plan">
+              <p class="fw-l p-color">Annual Plan</p>
+              <p class="fw-s s-color">$59.99/year</p>
+            </div>
+            <p class="highlight-color underline fw-s">Change</p>
+          </div>
+
+          <button class="fs-md fw-m">Proceed to Payment</button>
+          <p class="fw-m s-color">Cancel Order</p>
+        </div>
+      </div>
+    </div>
+    <!-- Order Summary You can now listen to millions of songs, audiobooks, and
+    podcasts on any device anywhere you like! Annual Plan $59.99/year Change
+    Proceed to Payment Cancel Order
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
