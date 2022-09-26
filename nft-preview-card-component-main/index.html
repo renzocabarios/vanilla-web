@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | NFT preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.google.com/specimen/Outfit");
+      :root {
+        font-size: 18px;
+        font-family: "Outfit", sans-serif;
+        --soft-blue: hsl(215, 51%, 70%);
+        --cyan: hsl(178, 100%, 50%);
+        --bg: hsl(217, 54%, 11%);
+        --card-bg: hsl(216, 50%, 16%);
+        --line: hsl(215, 32%, 27%);
+        --white: hsl(0, 0%, 100%);
+        --radius: 1rem;
+      }
+
+      /* ### Primary
+
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%) */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        background-color: var(--bg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card {
+        background-color: var(--card-bg);
+        height: 90%;
+        width: 90%;
+        max-width: 21rem;
+        max-height: 34rem;
+        border-radius: var(--radius);
+        display: grid;
+        grid-template-rows: 4fr 2.5fr;
+        padding: 1.5rem;
+        gap: 2rem;
+      }
+
+      .image {
+        background-image: url("./images/image-equilibrium.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: var(--radius);
+      }
+
+      .c-white {
+        color: var(--white);
+      }
+
+      .c-soft-blue {
+        color: var(--soft-blue);
+      }
+
+      .c-cyan {
+        color: var(--cyan);
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .details {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+      }
+
+      .fw-md {
+        font-weight: 400;
+      }
+
+      .fw-lg {
+        font-weight: 600;
+      }
+
+      .fs-lg {
+        font-size: 1.3rem;
+      }
+
+      .layout {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+
+      hr {
+        background-color: var(--line);
+        border: 00.01rem solid var(--line);
+      }
+
+      span {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="image"></div>
+      <div class="content">
+        <p class="c-white fw-lg fs-lg">Equilibrium #3429</p>
+        <p class="c-soft-blue">
+          Our Equilibrium collection promotes balance and calm.
+        </p>
+        <div class="">
+          <div class="details">
+            <div class="layout">
+              <img src="./images/icon-ethereum.svg" alt="" srcset="" />
+              <p class="c-cyan fw-lg">0.041 ETH</p>
+            </div>
+            <div class="layout">
+              <img src="./images/icon-clock.svg" alt="" srcset="" />
+              <p class="c-soft-blue">3 days left</p>
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div class="layout">
+          <img src="./images/image-avatar.png" height="33rem" />
+          <p class="c-white">
+            <span class="c-soft-blue"> Creation of </span>
+            Jules Wyvern
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
