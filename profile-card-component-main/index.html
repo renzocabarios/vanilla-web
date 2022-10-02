@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <title>Frontend Mentor | Profile card component</title>
+
+  <style>
+    @import url("https://fonts.google.com/specimen/Kumbh+Sans");
+
+    :root {
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--dark-gray);
+      font-family: "Kumbh Sans", sans-serif;
+      --fw-400: 400;
+      --fw-700: 700;
+      --bright-orange: hsl(31, 77%, 52%);
+      --dark-cyan: hsl(185, 75%, 39%);
+      --very-dark-cyan: hsl(229, 23%, 23%);
+      --dark-blue: hsl(227, 10%, 46%);
+      --dark-gray: hsl(0, 0%, 59%);
+      --paragraph: hsla(0, 0%, 100%, 0.75);
+      --bg: hsl(0, 0%, 95%);
+      --white: hsl(0, 0%, 100%);
+      --radius: 1.5rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .c-gray{ 
+      color: var(--dark-gray);
+    }
+
+    .c-dark-blue{ 
+      color: var(--very-dark-cyan);
+    }
+
+    .fw-400 {
+      font-weight: var(--fw-400);
+    }
+
+    .fw-700 {
+      font-weight: var(--fw-700);
+    }
+
+    body {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: aqua;
+      color: black;
+    }
+
+    .card {
+      display: grid;
+      grid-template-rows: 1fr 1fr 0.5fr;
+      height: 23rem;
+      width: 20rem;
+      background-color: white;
+      border-radius: var(--radius);
+    }
+
+    .bg {
+      background-image: url("./images/bg-pattern-card.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+
+    .dp {
+      position: relative;
+      width: 100%;
+      height: 6rem;
+      top: 75%;
+      display: flex;
+      justify-content: center;
+    }
+
+    img {
+      border-radius: 6rem;
+      border: 0.3rem solid white;
+    }
+
+    .details {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    p {
+      color: black;
+
+    }
+
+    hr {
+      width: 100%
+    }
+
+    .stats{ 
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .stat{ 
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="bg">
+      <div class="dp center">
+        <img src="./images/image-victor.jpg" alt="" srcset="">
+      </div>
+    </div>
+    <div class="details">
+      <p class="fw-700 c-dark-blue">Victor Crest <span class="c-gray">26</span> </p>
+      <p class="c-gray">London</p>
+      <hr />
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <p class="fw-700">80K</p>
+        <span class="c-gray">Followers</span>
+      </div>
+      <div class="stat">
+        <p class="fw-700">80K</p>
+        <span class="c-gray">Likes</span>
+      </div>
+      <div class="stat">
+        <p class="fw-700">1.4K</p>
+        <span class="c-gray">Photos</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Victor Crest 26 London 80K Followers 803K Likes 1.4K Photos
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>. -->
+  </div>
+</body>
+
+</html>
