@@ -1,0 +1,130 @@
+<!-- WIP in desktop view -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <title>
+      Frontend Mentor | Huddle landing page with single introductory section
+    </title>
+
+    <style>
+      @import url("https://fonts.google.com/specimen/Open+Sans");
+      @import url("https://fonts.google.com/specimen/Poppins");
+
+      :root {
+        --font-1: "Open Sans", sans-serif;
+        --font-2: "Big Shoulders Display", sans-serif;
+        --fw-sm: 400;
+        --fw-md: 600;
+        --violet: hsl(257, 40%, 49%);
+        --magenta: hsl(300, 69%, 71%);
+      }
+
+      body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-image: url("./images/bg-mobile.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: var(--violet);
+        font-family: var(--font-1);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0 0.5rem;
+        height: 100vh;
+      }
+
+      .logo-container {
+        display: flex;
+        width: 100%;
+      }
+
+      .logo {
+        min-width: 9rem;
+        width: 8%;
+      }
+
+      .mock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .mock-up {
+        min-width: 20rem;
+        width: 100%;
+      }
+
+      .fw-sm {
+        font-weight: var(--fw-sm);
+      }
+
+      .fw-md {
+        font-weight: var(--fw-md);
+      }
+
+      button {
+        padding: 1rem 5rem;
+        border-radius: 1.4rem;
+        color: var(--violet);
+        border: none;
+        outline: none;
+      }
+
+      .material-icons {
+        font-size: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo-container">
+      <img class="logo" src="./images/logo.svg" alt="" srcset="" />
+    </div>
+
+    <div class="mock">
+      <img
+        class="mock-up"
+        src="./images/illustration-mockups.svg"
+        alt=""
+        srcset=""
+      />
+    </div>
+
+    <div>
+      <p class="fw-md">Build The Community Your Fans Will Love</p>
+      <p>
+        Huddle re-imagines the way we build communities. You have a voice, but
+        so does your audience. Create connections with your users as you engage
+        in genuine discussion.
+      </p>
+    </div>
+
+    <button class="fw-md">Register</button>
+
+    <div class="">
+      <i class="material-icons">account_circle</i>
+      <i class="material-icons">account_circle</i>
+      <i class="material-icons">account_circle</i>
+    </div>
+  </body>
+</html>
